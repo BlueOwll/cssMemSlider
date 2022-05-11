@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.wrapper{
+    margin-left:5vw;
+    margin-right:5vw;
+    width: 90vw;
+    /*max-width: 1200px;*/
+}
+
+p:hover + div{
+    animation-name: slide1;
+    animation-duration: 3s;
+}
+
+.marker{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+input{
+    appearance: none;
+    cursor: pointer;
+}
+input:checked + label > .marker{
+    background-color: red;
+}
+#radio1:checked ~.slider{
+    animation-name: slide1;
+    animation-duration: 0.5s;   
+    animation-fill-mode: forwards;
+}
+#radio2:checked ~.slider{
+    animation-name: slide2;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards; 
+}
+.slider{
+    display:flex;
+    overflow:hidden;   
+
+    
+}
+
+
+
+.slide{
+    width: 90vw;
+    flex-shrink: 0;
+}
+.slide img{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+@keyframes slide1 {
+    from{
+        
+    }  
+    to{
+        margin-left: -90vw;
+    }  
+}
+@keyframes slide2 {
+    from{
+        
+    }  
+    
+    to{
+        margin-left: -180vw;
+    }  
+}
