@@ -4,82 +4,177 @@
 
 html{
     font-size: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
 }
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
     
+}
+p{
+    font-size: 2rem;
+    margin: 0;
 }
 
 .wrapper{
     margin-left:5vw;
     margin-right:5vw;
     width: 90vw;
+    
     /*max-width: 1200px;*/
 }
 
-p:hover + div{
-    animation-name: slide1;
-    animation-duration: 3s;
+
+.marker-label{
+    display: flex;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;  
+    cursor: pointer; 
 }
 
 .marker{
-    width: 1.5rem;
-    height: 1.5rem;
+    margin: auto;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     border: 1px solid blue;
     cursor: pointer;
+}
+.marker-label:hover > .marker{
+    background-color: white;
 }
 input{
     appearance: none;
     cursor: pointer;
 }
-input:checked + label > .marker{
-    background-color: red;
+
+
+
+#radio1:checked ~ .controls-container > .controls > label > .input1{
+    background-color: blue;
 }
-#radio1:checked ~.slider{
-    animation-name: slide1;
-    animation-duration: 0.5s;   
+#radio2:checked ~ .controls-container > .controls > label > .input2{
+    background-color: blue;
+}
+#radio3:checked ~ .controls-container > .controls > label > .input3{
+    background-color: blue;
+}
+#radio4:checked ~ .controls-container > .controls > label > .input4{
+    background-color: blue;
+}
+#radio5:checked ~ .controls-container > .controls > label > .input5{
+    background-color: blue;
+}
+.controls-container > .description > *{
+    display: none;
+}
+#radio1:checked ~ .controls-container > .description > .description1{
+    display:block;
+    animation-name: description-move;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio2:checked ~ .controls-container > .description > .description2{
+    display:block;
+    animation-name: description-move;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio3:checked ~ .controls-container > .description > .description3{
+    display:block;
+    animation-name: description-move;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio4:checked ~ .controls-container > .description > .description4{
+    display:block;
+    animation-name: description-move;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio5:checked ~ .controls-container > .description > .description5{
+    display:block;
+    animation-name: description-move;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+
+#radio1:checked ~.slider > .input1{
+    display:block;
+    animation-name: slide;
+    animation-duration: 1s;   
     animation-fill-mode: forwards;
 }
-#radio2:checked ~.slider{
-    animation-name: slide2;
-    animation-duration: 3s;  
+#radio2:checked ~.slider > .input2{
+    display:block;
+    animation-name: slide;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio3:checked ~.slider > .input3{
+    display:block;
+    animation-name: slide;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio4:checked ~.slider > .input4{
+    display:block;
+    animation-name: slide;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+#radio5:checked ~.slider > .input5{
+    display:block;
+    animation-name: slide;
+    animation-duration: 1s;  
     animation-fill-mode: forwards; 
 }
 .slider{
     display:flex;
-    overflow:hidden;   
-
-    
+    overflow:hidden;     
 }
 
-
-
 .slide{
+    display:none;
     width: 90vw;
     flex-shrink: 0;
+    border-radius: 5vw;
+    overflow:hidden;  
 }
 .slide img{
     display: block;
+    width: 100%;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
 }
-@keyframes slide1 {
+@keyframes slide {
     from{
-        
+        margin-left: 90vw; 
     }  
     to{
-        margin-left: -90vw;
+        margin-left: 0vw;
     }  
 }
-@keyframes slide2 {
+
+@keyframes description-move {
     from{
-        
+        margin-left: 20vw;    
     }  
-    
     to{
-        margin-left: -180vw;
+        margin-left: 0;
     }  
+}
+.controls-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+.controls{
+    display:flex;
+    justify-content: flex-end;
 }
