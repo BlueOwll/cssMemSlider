@@ -73,7 +73,29 @@ input{
     margin-right:auto;
     text-align:center;
 }
-
+.controls-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+}
+@media screen and (max-width: 767px) {
+    .controls-container {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: center;
+    }
+}
+.controls{
+    display:flex;
+    justify-content: flex-end;
+}
+@media screen and (max-width: 767px) {
+    .description{
+        margin-top: 5vh;
+        align-self: flex-start;
+    }
+}
 
 
 #radio1:checked ~ .controls-container > .controls > label > .input1{
@@ -171,27 +193,4 @@ input{
     to{
         margin-left: 0;
     }  
-}
-.controls-container{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 5vh;
-}
-@media screen and (max-width: 767px) {
-    .controls-container {
-      flex-direction: column-reverse;
-      justify-content: flex-start;
-      align-items: center;
-    }
-}
-.controls{
-    display:flex;
-    justify-content: flex-end;
-}
-@media screen and (max-width: 767px) {
-    .description{
-        margin-top: 5vh;
-        align-self: flex-start;
-    }
 }
