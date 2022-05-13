@@ -119,62 +119,62 @@ input{
 #radio1:checked ~ .controls-container > .description > .description1{
     display:block;
     animation-name: description-move;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio2:checked ~ .controls-container > .description > .description2{
     display:block;
     animation-name: description-move;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio3:checked ~ .controls-container > .description > .description3{
     display:block;
     animation-name: description-move;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio4:checked ~ .controls-container > .description > .description4{
     display:block;
     animation-name: description-move;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio5:checked ~ .controls-container > .description > .description5{
     display:block;
     animation-name: description-move;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 
 #radio1:checked ~.slider > .input1{
     display:block;
     animation-name: slide;
-    animation-duration: 1s;   
+    animation-duration: 0.7s;   
     animation-fill-mode: forwards;
 }
 #radio2:checked ~.slider > .input2{
     display:block;
     animation-name: slide;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio3:checked ~.slider > .input3{
     display:block;
     animation-name: slide;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio4:checked ~.slider > .input4{
     display:block;
     animation-name: slide;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 #radio5:checked ~.slider > .input5{
     display:block;
     animation-name: slide;
-    animation-duration: 1s;  
+    animation-duration: 0.7s;  
     animation-fill-mode: forwards; 
 }
 @keyframes slide {
