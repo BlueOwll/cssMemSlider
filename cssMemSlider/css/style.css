@@ -158,8 +158,9 @@ input{
 }
 
 #radio1:checked ~.slider > .input1{
-    transform: translate(-100%);
-    transition: 0.5s;
+    animation-name: slide1-move;
+    animation-duration: 0.5s;  
+    animation-fill-mode: forwards; 
 }
 #radio2:checked ~.slider > .input2{
     transform: translate(-200%);
@@ -176,6 +177,14 @@ input{
 #radio5:checked ~.slider > .input5{
     transform: translate(-500%);
     transition: 0.5s;
+}
+@keyframes slide1-move {
+    from{
+        margin-left: 0;    
+    }  
+    to{
+        margin-left: -100%;
+    }  
 }
 
 
