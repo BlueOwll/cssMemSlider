@@ -22,7 +22,9 @@ p{
     margin-left:auto;
     margin-right:auto;
     padding: 5%;
-    max-width: 1200px;
+    padding-top: 2%;
+    max-width: 120rem;
+    min-width: 32rem;
 }
 
 
@@ -46,21 +48,23 @@ p{
     background-color: white;
 }
 input{
-    display: none;
+    visibility: hidden;
+    height: 0;
+    width: 0;
     margin: 0;
     cursor: pointer;
 }
 
 .slider{
-    display:block;
+    display:flex;
     overflow:hidden;     
 }
 
 .slide{
-    display:none;
     width: 100%;
+    background-color: black;
     flex-shrink: 0;
-    border-radius: 5vw;
+    border-radius: 3vw;
     overflow:hidden;  
 }
 .slide img{
@@ -72,9 +76,20 @@ input{
     margin-right:auto;
     text-align:center;
 }
+.description{
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.description > p{
+    flex-shrink: 0;
+    width: 100%;
+    white-space: nowrap;
+}
 .controls-container{
+    width: 100%;
     display:flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     margin-top: 5vh;
 }
@@ -113,81 +128,60 @@ input{
     background-color: blue;
 }
 .controls-container > .description > *{
-    display: none;
+    visibility: hidden;
 }
 #radio1:checked ~ .controls-container > .description > .description1{
-    display:block;
-    animation-name: description-move;
-    animation-duration: 0.7s;  
+    visibility:visible;
+    animation-name: description1-move;
+    animation-duration: 0.5s;  
     animation-fill-mode: forwards; 
 }
 #radio2:checked ~ .controls-container > .description > .description2{
-    display:block;
-    animation-name: description-move;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    visibility:visible;
+    transform: translate(-100%);
+    transition: 0.5s; 
 }
 #radio3:checked ~ .controls-container > .description > .description3{
-    display:block;
-    animation-name: description-move;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    visibility:visible;
+    transform: translate(-200%);
+    transition: 0.5s; 
 }
 #radio4:checked ~ .controls-container > .description > .description4{
-    display:block;
-    animation-name: description-move;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    visibility:visible;
+    transform: translate(-300%);
+    transition: 0.5s; 
 }
 #radio5:checked ~ .controls-container > .description > .description5{
-    display:block;
-    animation-name: description-move;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    visibility:visible;
+    transform: translate(-400%);
+    transition: 0.5s; 
 }
 
 #radio1:checked ~.slider > .input1{
-    display:block;
-    animation-name: slide;
-    animation-duration: 0.7s;   
-    animation-fill-mode: forwards;
+    transform: translate(-100%);
+    transition: 0.5s;
 }
 #radio2:checked ~.slider > .input2{
-    display:block;
-    animation-name: slide;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    transform: translate(-200%);
+    transition: 0.5s;
 }
 #radio3:checked ~.slider > .input3{
-    display:block;
-    animation-name: slide;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    transform: translate(-300%);
+    transition: 0.5s;
 }
 #radio4:checked ~.slider > .input4{
-    display:block;
-    animation-name: slide;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
+    transform: translate(-400%);
+    transition: 0.5s;
 }
 #radio5:checked ~.slider > .input5{
-    display:block;
-    animation-name: slide;
-    animation-duration: 0.7s;  
-    animation-fill-mode: forwards; 
-}
-@keyframes slide {
-    from{
-        margin-left: 90vw; 
-    }  
-    to{
-        margin-left: 0vw;
-    }  
+    transform: translate(-500%);
+    transition: 0.5s;
 }
 
-@keyframes description-move {
+
+@keyframes description1-move {
     from{
-        margin-left: 20vw;    
+        margin-left: 100%;    
     }  
     to{
         margin-left: 0;
